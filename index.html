@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reelora — Stream the stories you love</title>
+  <meta name="description" content="Reelora is a streaming-style TV discovery app: browse trending series, watch demo playback, save titles to My List and switch profiles. Built with vanilla JavaScript and the TVmaze API.">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reelora — Stories on repeat">
+  <meta property="og:description" content="A streaming-style TV discovery app built with vanilla JavaScript and the TVmaze API.">
+  <meta property="og:image" content="https://insofury.github.io/reelora/assets/og-image.png">
+  <meta property="og:url" content="https://insofury.github.io/reelora/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://api.tvmaze.com" crossorigin>
+  <link rel="preconnect" href="https://static.tvmaze.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <button type="button" class="skip-link" data-skip>Skip to content</button>
+
+  <header id="nav" class="nav"></header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>
+        <strong>Reelora</strong> is a portfolio project by
+        <a href="https://insofury.github.io/" target="_blank" rel="noopener">Ashish Chahar</a>.
+        Not affiliated with any streaming service.
+      </p>
+      <p>
+        Show data &amp; images: <a href="https://www.tvmaze.com/" target="_blank" rel="noopener">TVmaze</a> (CC BY-SA) ·
+        Demo video: <a href="https://peach.blender.org/" target="_blank" rel="noopener">Big Buck Bunny</a> © Blender Foundation (CC BY 3.0) ·
+        <a href="https://github.com/Insofury/reelora" target="_blank" rel="noopener">Source code</a>
+      </p>
+    </div>
+  </footer>
+
+  <dialog id="title-modal" class="modal" aria-labelledby="modal-title"></dialog>
+  <div id="player-root"></div>
+  <div id="gate-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">Reelora needs JavaScript to load shows. Please enable it and reload.</p></noscript>
+</body>
+</html>
